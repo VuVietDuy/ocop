@@ -1,0 +1,37 @@
+.rate-card {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px #888888;
+  background-color: #fff;
+}
+.rate-card__star-box {
+  display: inline-flex;
+  transform: translateY(2px);
+}
+.rate-card__star-box i {
+  color: #f4a700;
+}
+.rate-card__text {
+  display: inline;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color: #36571a;
+  margin-right: 8px;
+}
+.icon-opacity {
+  opacity: 0.4;
+}
+.icon-lg {
+  font-size: 28px;
+}
+.text-lg {
+  font-size: 24px;
+}
+.icon-sm {
+  font-size: 24px;
+}
+.text-sm {
+  font-size: 20px;
+}

@@ -1,0 +1,144 @@
+.header-container {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 35vw;
+  height: 59px;
+  justify-content: center;
+  right: 0;
+  border-bottom-left-radius: 30px;
+  background-color: #2f581f;
+  opacity: 0.8;
+}
+.header-logo {
+  opacity: 1;
+  border-radius: 6%;
+  margin-left: 8px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.header-text {
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 17px;
+  opacity: 1;
+}
+
+/* Body  */
+.list-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 16px 0;
+}
+.list-item__header {
+  text-align: center;
+  color: #2f581f;
+  background-color: #fff;
+  background-size: cover;
+}
+.list-item__logo {
+  width: 75px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #ffffff00;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px 5px #ddd;
+}
+.list-item__container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 80px;
+  margin-top: 16px;
+}
+
+.list-item__box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .list-item__card {
+} */
+.list-item__link {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  text-decoration: none;
+  /* gap: 20px; */
+  /* justify-content: space-around;
+  align-items: center; */
+}
+.list-item__thumbnail {
+  width: 260px;
+  height: 260px;
+}
+.list-item__star {
+}
+.list-item__desc {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-left: 4px;
+}
+.list-item__title {
+  font-size: 18px;
+  margin: auto 0 0;
+  padding: 0 0.5em;
+  color: #2f581f;
+}
+.list-item__rate {
+  margin-left: 4px;
+  margin-top: 12px;
+}
+.list-item__rate img {
+  width: 80%;
+  height: 50%;
+  margin-top: 10px;
+}
+
+/* Footer  */
+.footer-container {
+  z-index: 10;
+  background-color: #2f581f;
+  opacity: 0.8;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 44px;
+  justify-content: space-around;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+.footer-logo img {
+  margin-top: 8px;
+  margin-right: 10px;
+}
+.footer-text {
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 17px;
+  opacity: 1;
+}
