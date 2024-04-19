@@ -97,10 +97,7 @@ export default function Banner(
             delay: 3000,
             disableOnInteraction: false,
           }}
-          // pagination={{
-          //   type: "fraction",
-          // }}
-          modules={[Autoplay, EffectFade, Pagination]}
+          modules={[Autoplay, EffectFade]}
         >
           {itemList.length > 0 &&
             itemList.map((item, index) => {

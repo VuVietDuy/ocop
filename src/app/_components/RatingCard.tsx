@@ -4,6 +4,7 @@ import "./RatingCard.css";
 interface IProps {
   rateNum: number;
   size: string;
+  // className: string;
 }
 
 export function RatingCard(props: IProps) {
