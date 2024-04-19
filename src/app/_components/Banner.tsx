@@ -44,9 +44,7 @@ interface IProduct {
   name: string;
 }
 
-export default function Banner(
-  ref: React.MutableRefObject<HTMLElement | undefined | null>
-) {
+export default function Banner() {
   const [itemList, setItemList] = useState<IProduct[]>([]);
   const [controlledSwiper, setControlledSwiper] = useState<SwiperClass>();
 

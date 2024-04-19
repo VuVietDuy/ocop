@@ -1,19 +1,19 @@
 "use client";
-import Image from "next/image";
-import Banner from "./_components/Banner";
-// import { useEffect, useState } from "react";
-import "./page.css";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Footer from "./@footer/default";
 import Header from "./@header/default";
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import Banner from "./_components/Banner";
 import { RatingCard } from "./_components/RatingCard";
+import "./page.css";
+
 interface IProduct {
   sliderImg: string;
   thumbnail: string;
   rate: number;
   name: string;
 }
+
 export default function Home() {
   const [itemList, setItemList] = useState<IProduct[]>([]);
 
@@ -26,6 +26,7 @@ export default function Home() {
         setItemList(json.data);
       });
   }, []);
+
   return (
     <main>
       <Header />
