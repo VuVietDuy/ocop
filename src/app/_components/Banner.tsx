@@ -14,7 +14,7 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-
+import { redirect } from "next/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { RatingCard } from "./RatingCard";
@@ -87,10 +87,6 @@ export default function Banner(
           slidesPerView={1}
           initialSlide={1} // Bắt đầu từ slide thứ 1
           effect={"fade"}
-          onSlideChange={() => {
-            const slideIndex = swiperRef.current?.swiper?.realIndex;
-            console.log("check slider 1: ", slideIndex);
-          }}
           spaceBetween={30}
           loop={true}
           autoplay={{
@@ -132,10 +128,6 @@ export default function Banner(
           allowTouchMove={true}
           className="slider"
           slidesPerView={3}
-          onSlideChange={() => {
-            const slideIndex = swiperRef.current?.swiper?.realIndex;
-            console.log("check slider 2: ", slideIndex);
-          }}
           spaceBetween={50}
           loop={true}
           autoplay={{
@@ -148,7 +140,11 @@ export default function Banner(
           {itemList.length > 0 &&
             itemList.map((item, index) => {
               return (
-                <SwiperSlide key={index} className="card-slider">
+                <SwiperSlide
+                  key={index}
+                  className="card-slider"
+                  onClick={() => redirect("/")}
+                >
                   <div className="card-slider">
                     <div className="card-slider__title">
                       <h3>{item.name}</h3>
