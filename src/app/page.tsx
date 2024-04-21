@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-import Footer from "./@footer/default";
-import Header from "./@header/default";
 import Banner from "./_components/Banner";
 import { RatingCard } from "./_components/RatingCard";
 import "./page.css";
@@ -30,7 +28,6 @@ export default function Home(): React.ReactNode {
 
   return (
     <main>
-      <Header />
       <Banner products={itemList} />
       <section className="list-item">
         <h1 className="list-item__header">Sản phẩm</h1>
@@ -57,7 +54,6 @@ export default function Home(): React.ReactNode {
           );
         })}
       </div>
-      <Footer />
     </main>
   );
 }
