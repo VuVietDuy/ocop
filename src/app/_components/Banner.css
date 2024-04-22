@@ -25,7 +25,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 20%;
+  left: 7%;
   animation: showcontent 1s ease-in-out 1 forwards;
 }
 .bg-slider-content h1 {

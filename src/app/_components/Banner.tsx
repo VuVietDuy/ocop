@@ -52,6 +52,10 @@ export default function Banner(
 
   const backgroundRef = useRef<any>(null);
   const swiperRef = useRef<any>(null);
+
+  const [activeSlide, setActiveSlide] = useState(0);
+  const sliderRef = useRef(null);
+
   useEffect(() => {
     fetch(
       "https://ocop-backend.vercel.app/api/products?fbclid=IwAR0ZYzhunRSp5ESvM_mx4k5ijzMyPFqpsApD-z3SchASGMYf15vts35s8MM"
@@ -63,15 +67,6 @@ export default function Banner(
       .catch((e) => console.log(e));
   }, []);
 
-  useEffect(() => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.allowTouchMove = false;
-      // swiperRef.current.swiper.autoplay.paused = false;
-      // swiperRef.current.swiper.realIndex = 0;
-
-      console.log("swiper1", swiperRef.current?.swiper.autoplay);
-    }
-  }, [itemList]);
   console.log("check itemList: ", itemList);
   return (
     <div className="banner">
@@ -106,10 +101,7 @@ export default function Banner(
                     className="sliderImg"
                     loading="lazy"
                   />
-                  <div
-                    className="bg-slider-content"
-                    style={{ position: "absolute", top: "50%", left: "100px" }}
-                  >
+                  <div className="bg-slider-content">
                     <h1>{item.name}</h1>
                     <RatingCard size="lg" rateNum={item.rate} />
                   </div>
@@ -126,9 +118,10 @@ export default function Banner(
           initialSlide={1} // Bắt đầu từ slide thứ 1
           speed={1000}
           allowTouchMove={true}
-          className="slider"
+          className="slider "
           slidesPerView={3}
           spaceBetween={50}
+          // onSlideChange={handleSlideChange}
           loop={true}
           autoplay={{
             delay: 3000,
