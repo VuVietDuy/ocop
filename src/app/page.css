@@ -1,5 +1,5 @@
 .header-container {
-  z-index: 10;
+  z-index: 30;
   position: fixed;
   display: flex;
   align-items: center;
@@ -92,7 +92,6 @@
   display: flex;
   flex-direction: column;
   width: auto;
-  margin-left: 4px;
 }
 .list-item__title {
   font-size: 18px;
@@ -112,7 +111,7 @@
 
 /* Footer  */
 .footer-container {
-  z-index: 10;
+  z-index: 100;
   background-color: #2f581f;
   opacity: 0.8;
   align-items: center;

@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import { RatingCard } from "../_components/RatingCard";
+import { IoHome } from "react-icons/io5";
+import Link from "next/link";
 
 interface IProduct {
   name: string;
@@ -40,13 +42,12 @@ export default function Product({ params }: { params: { product: string } }) {
 
   return (
     <div className="detailProduct">
-      <section>
+      <Link href="/" className="home-logo">
+        <IoHome className="home-icon" />
+      </Link>
+      <div className="section">
         <img src={data?.detailThumbnail} id="bg" />
-        <img
-          src="https://cdit.ptit.edu.vn/ocop2/images/details/spmoccaukhecoc1.png"
-          alt=""
-          id="moon1"
-        />
+
         <img
           src="https://cdit.ptit.edu.vn/ocop2/images/details/may1.png"
           alt=""
@@ -57,42 +58,46 @@ export default function Product({ params }: { params: { product: string } }) {
           alt=""
           id="saobang1"
         />
-      </section>
-      <div className="nameProduct">
-        <h1>{data?.name}</h1>
-      </div>
-      <div className="headerContent">
-        <img
-          src="https://cdit.ptit.edu.vn/ocop2/images/qr/qrnontamtrahoanxuyen.png"
-          alt=""
-        />
-        <div className="social">
-          <div className="itemSocial">
+        <div className="nameProduct">
+          <h1>{data?.name}</h1>
+        </div>
+        <div className="boxName">
+          <div className="headerContent">
             <img
-              src="https://cdit.ptit.edu.vn/ocop2/images/details/home.png"
+              src="https://cdit.ptit.edu.vn/ocop2/images/qr/qrnontamtrahoanxuyen.png"
               alt=""
             />
-            <h3>{data?.supplyId?.supplyAssociation}</h3>
-          </div>
-          <div className="itemSocial">
-            <img
-              src="https://cdit.ptit.edu.vn/ocop2/images/details/location.png"
-              alt=""
-            />
-            <h3>{data?.supplyId?.supplyLocation}</h3>
-          </div>
-          <div className="itemSocial">
-            <img
-              src="https://cdit.ptit.edu.vn/ocop2/images/details/moblie.png"
-              alt=""
-            />
-            <h3>{data?.supplyId?.phone}</h3>
+            <div className="social">
+              <div className="itemSocial">
+                <img
+                  src="https://cdit.ptit.edu.vn/ocop2/images/details/home.png"
+                  alt=""
+                />
+                <h3>{data?.supplyId?.supplyAssociation}</h3>
+              </div>
+              <div className="itemSocial">
+                <img
+                  src="https://cdit.ptit.edu.vn/ocop2/images/details/location.png"
+                  alt=""
+                />
+                <h3>{data?.supplyId?.supplyLocation}</h3>
+              </div>
+              <div className="itemSocial">
+                <img
+                  src="https://cdit.ptit.edu.vn/ocop2/images/details/moblie.png"
+                  alt=""
+                />
+                <h3>{data?.supplyId?.phone}</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div className="insert-bg"></div>
       <div className="addressProduct">
         <div className="imgProduct">
           <img
+            className="qr-img"
             src="https://cdit.ptit.edu.vn/ocop2/images/iconPro/Anhsanphamtrangcon_Tra%20moc%20cau%20Khe%20Coc-20.png"
             alt=""
           />
@@ -105,7 +110,7 @@ export default function Product({ params }: { params: { product: string } }) {
           <p>Thời hạn sử dụng sản phẩm: 12 tháng kể từ ngày sản xuất</p>
           <p>{data?.description}</p>
 
-          <div className="ocopRate">
+          <div className="ocopRate mt-3">
             <RatingCard rateNum={data?.rate} size="sm" />
           </div>
         </div>

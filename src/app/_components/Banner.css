@@ -29,6 +29,7 @@
   animation: showcontent 1s ease-in-out 1 forwards;
 }
 .bg-slider-content h1 {
+  max-width: 550px;
   margin-bottom: 0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: #fff;
