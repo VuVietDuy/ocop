@@ -1,35 +1,34 @@
 "use client";
-import Image from "next/image";
-import Banner from "./_components/Banner";
-// import { useEffect, useState } from "react";
-import "./page.css";
-import Footer from "./@footer/default";
-import Header from "./@header/default";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+
+import Banner from "./_components/Banner";
 import { RatingCard } from "./_components/RatingCard";
-interface IProduct {
-  sliderImg: string;
-  thumbnail: string;
+import "./page.css";
+
+export interface IProduct {
+  _id?: string;
+  sliderImg?: string;
+  thumbnail?: string;
+  sliderThumbnail?: string;
   rate: number;
   name: string;
 }
-export default function Home() {
+
+export default function Home(): React.ReactNode {
   const [itemList, setItemList] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    fetch(
-      "https://ocop-backend.vercel.app/api/products?fbclid=IwAR0ZYzhunRSp5ESvM_mx4k5ijzMyPFqpsApD-z3SchASGMYf15vts35s8MM"
-    )
+    fetch("https://ocop-backend.vercel.app/api/products")
       .then((response) => response.json())
       .then((json) => {
         setItemList(json.data);
       });
   }, []);
+
   return (
     <main>
-      <Header />
-      <Banner />
+      <Banner products={itemList} />
       <section className="list-item">
         <h1 className="list-item__header">Sản phẩm</h1>
         <div className="list-item__logo">
@@ -39,8 +38,7 @@ export default function Home() {
       <div className="list-item__container ">
         {itemList.map((item, index) => {
           return (
-            // <div className=" list-item__card">
-            <Link href="/" className="list-item__link">
+            <Link href={`/${item._id}`} key={index} className="list-item__link">
               <img
                 className="list-item__thumbnail "
                 src={item.thumbnail}
@@ -53,11 +51,9 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            // </div>
           );
         })}
       </div>
-      <Footer />
     </main>
   );
 }
