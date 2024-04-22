@@ -49,13 +49,12 @@
   width: 60%;
   margin: 0 !important;
   position: absolute !important;
-  /* right: -50px; */
   right: -10%;
   top: 50%;
   transform: translateY(-25%);
 }
 .card-slider {
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   border-radius: 8px;
   display: block;

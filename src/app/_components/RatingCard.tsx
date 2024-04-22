@@ -3,7 +3,7 @@ import { IoMdStar } from "react-icons/io";
 import "./RatingCard.css";
 
 interface IProps {
-  rateNum: number;
+  rateNum?: number;
   size: string;
 }
 
