@@ -20,10 +20,6 @@ import "swiper/css/scrollbar";
 import { RatingCard } from "./RatingCard";
 import { IoMdStar } from "react-icons/io";
 
-import img1 from "../../../public/OCOP_mangluctruc.png";
-import img2 from "../../../public/OCOP_hongphuoctra.png";
-import img3 from "../../../public/OCOP_tramamsuongsonHuongQue.png";
-import img4 from "../../../public/OCOP_mangluctruc.png";
 const Image = [
   "/OCOP_hongphuoctra.png",
   "/OCOP_mangluctruc.png",
